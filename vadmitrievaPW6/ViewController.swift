@@ -15,9 +15,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("vc")
         // Do any additional setup after loading the view.
-        view.backgroundColor = .systemGray6
+        view.backgroundColor = .systemGray
         setupFrameworkButton()
         setupPackageButton()
         setupPodButton()
@@ -27,7 +26,7 @@ class ViewController: UIViewController {
     private func setupFrameworkButton(){
         let button = UIButton()
         view.addSubview(button)
-        button.setTitle("Log (framework)", for: .normal)
+        button.setTitle(" Log (framework) ", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 200).isActive = true
         button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 100).isActive = true
@@ -43,7 +42,7 @@ class ViewController: UIViewController {
     private func setupPackageButton() {
         let button = UIButton()
         view.addSubview(button)
-        button.setTitle("Log (swift package)", for: .normal)
+        button.setTitle(" Log (swift package) ", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 250).isActive = true
         button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 100).isActive = true
@@ -59,11 +58,11 @@ class ViewController: UIViewController {
     private func setupPodButton() {
         let button = UIButton()
         view.addSubview(button)
-        button.setTitle("Log (pod)", for: .normal)
+        button.setTitle(" Log (pod) ", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 300).isActive = true
         button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 100).isActive = true
-        button.backgroundColor = .systemPurple
+        button.backgroundColor = .systemOrange
         button.addTarget(self, action: #selector(logFromPod),
                          for: .touchUpInside)
     }
@@ -75,11 +74,12 @@ class ViewController: UIViewController {
     private func setupCarthageButton() {
         let button = UIButton()
         view.addSubview(button)
-        button.setTitle("Log (carthage)", for: .normal)
+        button.setTitle(" Log (carthage) ", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 350).isActive = true
         button.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 100).isActive = true
-        button.backgroundColor = .systemBlue
+        button.backgroundColor = .systemYellow
+        button.setTitleColor(.black, for: .normal)
         //button.addTarget(self, action: #selector(logFromCarthage),
                          //for: .touchUpInside)
     }
